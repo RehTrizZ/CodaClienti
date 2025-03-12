@@ -10,3 +10,4 @@ Classe run fornisce tre opzioni-
 1.inserisci nuova persona 
 2.servi persona 
 3.prossima persona
+ 
