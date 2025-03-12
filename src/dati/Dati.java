@@ -1,3 +1,7 @@
+package dati;
+
+import persona.Persona;
+
 import java.util.ArrayList;
 
 public class Dati {

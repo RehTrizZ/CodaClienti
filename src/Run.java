@@ -1,3 +1,7 @@
+import dati.Dati;
+import persona.Persona;
+import sistema.SistemaCoda;
+
 import java.util.Scanner;
 
 public class Run {
@@ -7,17 +11,17 @@ public class Run {
             System.out.println("Inserisci l'opzione desiderata:\n" +
                     "1. Inserisci persona\n" +
                     "2. Servi persona\n" +
-                    "3. Dati prossima persona");
+                    "3. dati.Dati prossima persona");
             int num= scanner.nextInt();
             switch (num){
                 case 1:
-                    //passa la persona
+                    carica();
                     break;
                 case 2:
-                    //servi persona
+                    SistemaCoda.serveCustomer();
                     break;
                 case 3:
-                    //prossima persona
+                    SistemaCoda.nextCustomer();
                     break;
                 default:
                     System.out.println("Opzione non valida");
@@ -32,6 +36,6 @@ public class Run {
         System.out.println("Inserisci il cognome:");
         String cognome=scanner.next();
         int numero=scanner.nextInt();
-        //implementa il passaggio dei dati alla lista
-    };
+        Dati.clienti.add(new Persona(nome, cognome, numero));
+    }
 }
