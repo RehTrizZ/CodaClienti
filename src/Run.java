@@ -7,11 +7,14 @@ import java.util.Scanner;
 public class Run {
     Scanner scanner=new Scanner(System.in);
     public void start(){
-        while (true){
+        boolean run=true;
+        //Selezione delle opzioni
+        while (run){
             System.out.println("Inserisci l'opzione desiderata:\n" +
                     "1. Inserisci persona\n" +
                     "2. Servi persona\n" +
-                    "3. dati.Dati prossima persona");
+                    "3. Dati.Dati prossima persona\n"+
+                    "4. Esci  ");
             int num= scanner.nextInt();
             switch (num){
                 case 1:
@@ -23,14 +26,17 @@ public class Run {
                 case 3:
                     SistemaCoda.nextCustomer();
                     break;
+                case 4:
+                    run=false;
+                    break;
                 default:
                     System.out.println("Opzione non valida");
             }
         }
     }
+    //Inserimento persona
     public void carica(){
         System.out.println("Inserisci i dati:");
-
         System.out.println("Inserisci il nome:");
         String nome=scanner.next();
         System.out.println("Inserisci il cognome:");
